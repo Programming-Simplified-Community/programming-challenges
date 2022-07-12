@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: python
+  IMAGE_NAME: ${{ github.repository }}-python
 
 jobs:
   build-python-image:
