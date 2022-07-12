@@ -8,7 +8,7 @@ env:
   IMAGE_NAME: python
 
 jobs:
-  build-and-push-image:
+  build-python-image:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -38,4 +38,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          file: repos/PythonChallengeTests/Dockerfile
+          file: ./repos/PythonChallengeTests/Dockerfile
